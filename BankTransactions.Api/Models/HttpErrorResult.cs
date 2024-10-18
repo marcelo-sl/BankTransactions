@@ -15,7 +15,7 @@ public class HttpErrorResult(HttpStatusCode code, string message)
 
     public static IResult NotFound(string message = "Resource not found")
     {
-        var error = new HttpErrorResult(HttpStatusCode.BadRequest, message);
+        var error = new HttpErrorResult(HttpStatusCode.NotFound, message);
         return Results.NotFound(error);
     }
 }
